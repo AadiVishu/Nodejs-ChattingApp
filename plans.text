@@ -1,0 +1,37 @@
+DEPENDENCIES:
+    express:
+    express-session:
+    flash-connect:
+    mongoose:
+    socket.io:
+    body-parser:
+    ejs:
+    bcrypt:
+    passport:
+    local-passport:
+    nodemon(dev dependency):
+
+APP FILE:
+    index.js file
+    (basic system):
+
+MODELS:
+    user model:
+    message model:
+    group-chat model:
+
+CONTROLLER:
+    userController:
+
+
+VIEWS:
+    header:
+    index:
+    chat:
+
+
+FUNCTIONALITIES:
+    create user:
+    login user:
+    getchat page:
+
