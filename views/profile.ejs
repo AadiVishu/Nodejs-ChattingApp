@@ -1,0 +1,154 @@
+<%- include('header')-%>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-5 bg-dark`   ">
+            <div class="col-md-12 bg-dark m-1 p-3">
+                <img src="/images/girl.jpg" class="user-profile-pic mt-1">
+                <span class="text-light ml-2"><b>Active User</b></span>
+            </div>
+            <div class="col-md-12 bg-dark m-1 p-3">
+                <div class="row">
+                    <div class="container profile-clearfix">
+                       <div class="row">
+                        <div class="col-md-9">
+                            <h6 class="text-light">Username : 
+                            <span class="text-success">aadi_0204</span>
+                            </h6>
+                        </div>
+                        <div class="col-md-3">
+                            <a href="#" class="float-right btn btn-sm bg-danger">Edit</a>
+                        </div>
+                       </div>
+                    </div>
+
+                    <div class="container profile-clearfix">
+                        <div class="row">
+                         <div class="col-md-9">
+                             <h6 class="text-light">Name : 
+                             <span class="text-success">Aaditya</span>
+                             </h6>
+                         </div>
+                         <div class="col-md-3">
+                             <a href="#" class="float-right btn btn-sm bg-danger">Edit</a>
+                         </div>
+                        </div>
+                     </div>
+
+
+                     <div class="container profile-clearfix">
+                        <div class="row">
+                         <div class="col-md-9">
+                             <h6 class="text-light">Email : 
+                             <span class="text-success">aadivishu4@gmail.com</span>
+                             </h6>
+                         </div>
+                         <div class="col-md-3">
+                             <a href="#" class="float-right btn btn-sm bg-danger">Edit</a>
+                         </div>
+                        </div>
+                     </div>
+
+                     <div class="container profile-clearfix">
+                        <div class="row">
+                         <div class="col-md-9">
+                             <h6 class="text-light">About : 
+                             <p class="text-success">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni sequi nihil totam, fugiat blanditiis error, neque omnis numquam fuga, accusamus eligendi accusantium! Magnam, iste. Architecto ut a tenetur ad. Nemo!</p>
+                             </h6>
+                         </div>
+                         <div class="col-md-3">
+                             <a href="#" class="float-right btn btn-sm bg-danger">Edit</a>
+                         </div>
+                        </div>
+                     </div>
+
+
+                     <div class="container profile-clearfix">
+                        <div class="row">
+                         <div class="col-md-9">
+                             <h6 class="text-light">Password : 
+                             <span class="text-success">**********</span>
+                             </h6>
+                         </div>
+                         <div class="col-md-3">
+                             <a href="#" class="float-right btn btn-sm bg-danger">Edit</a>
+                         </div>
+                        </div>
+                     </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-7">
+            <div class="form-group p-1">
+                <input id="myInput" class="mt-2 form-control" type="text" placeholder=" Search for friend...">
+            </div>
+            <div class="container bg-light p-3">
+                <div class="table-wrapper-scroll-y my-custom-scrollbar">
+                    <table class="table table-striped mb-0">
+                        <thead class="text-center">
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Username</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-center" id="myTable">
+                            <tr>
+                            <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>
+                                    <a href="#" class="btn btn-sm bg-primary"><b>Add Friend</b></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>
+                                    <a href="#" class="btn btn-sm bg-primary"><b>Add Friend</b></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Jacob</td>
+                                <td>Thanos</td>
+                                <td>
+                                    <a href="#" class="btn btn-sm bg-primary"><b>Add Friend</b></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+</body>
+</html>

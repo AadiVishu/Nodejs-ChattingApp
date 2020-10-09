@@ -9,18 +9,17 @@
     // const bcrypt = require('bcryptjs');
     // const flash = require('connect-flash');
     // const URL = "mongodb://localhost:27017/chat-app";
-
-const express = require('express');
-const router = express.Router();
-const mongoose = require('mongoose');
-const bodyparser = require('body-parser');
-const user = require('../models/user');
-const bcrypt = require('bcryptjs');
-const passport = require('passport');
-const session = require('express-session');
-const cookieParser = require('cookie-parser');
-const flash = require('connect-flash');
-const mongourl = "mongodb://localhost:27017/chat-app"
+    const express = require('express');
+    const router = express.Router();
+    const mongoose = require('mongoose');
+    const bodyparser = require('body-parser');
+    const user = require('../models/user');
+    const bcrypt = require('bcryptjs');
+    const passport = require('passport');
+    const session = require('express-session');
+    const cookieParser = require('cookie-parser');
+    const flash = require('connect-flash');
+    const mongourl = "mongodb://localhost:27017/chat-app"
 
 
 
@@ -159,7 +158,7 @@ router.get('/login', (req, res) => {
 router.post('/login', (req, res, next) => {
     passport.authenticate('local', {
         failureRedirect: '/login',
-        successRedirect: '/chatapp',  //success
+        successRedirect: '/chatapp',  //chatapp
         failureFlash: true,
     })(req, res, next);
 });
@@ -172,6 +171,22 @@ router.get('/logout', (req, res) => {
     req.logout();
     res.redirect('/login');
 });
+
+
+
+//Profile page:
+router.get('/profile',(req,res) => {
+    // res.render('profile');
+    user.findOne({email:req.body.email},(err,data) => {
+        if(err) throw err;
+        if(data) {
+            console.log("data is paasing")
+            res.render('profile', {data:data});
+        }
+    })
+})
+
+
 
 
 

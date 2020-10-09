@@ -12,6 +12,11 @@
 .left-clearfix {
     border-left: 1px solid white;
 }
+.profile-clearfix {
+    padding:10px;
+    margin: 10px;
+    border-bottom: 1px solid white;
+}
 
 /* custom-scroll bar: */
 /* width */
@@ -130,3 +135,14 @@
     padding-left:40px;
     padding-right:40px;
 }
+
+/* profile page: */
+
+.my-custom-scrollbar {
+    position: relative;
+    height: 84vh;
+    overflow: auto;
+    }
+    .table-wrapper-scroll-y {
+    display: block;
+    }
